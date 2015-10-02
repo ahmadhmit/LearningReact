@@ -1,0 +1,1 @@
+{"status_code":<%if@status%><%=@status%><%else%><%=response.status%><%end%>,"message":<%if@message%><%=@message.to_json.html_safe%><%else%><%="null"%><%end%>,"data":<%=yield%>}

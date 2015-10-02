@@ -1,0 +1,55 @@
+<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX3crqk3Cs0mS6RubvUNA9LgkB2PiTchk&libraries=places">
+</script> -->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing" >
+</script>
+
+<div class="container">
+	<div class="container-fluid">
+	  <div class="navbar-header">
+	    <a class="navbar-brand" href="./">Postcode</a>
+	  </div>
+	  <div id="navbar" class="navbar-collapse collapse">
+	  	<input id="pac-input" class="controls" type="text" placeholder="Enter postcode here..." >
+	  	<!-- <%= react_component('StateFilter') %>
+	  	<%= react_component('SuburbFilter') %> -->
+	  	<%= react_component('HomeApp') %>
+	  	
+
+	  	<form>
+
+		    <ul class="nav navbar-nav">
+		      <li><a>State</a></li>
+		      <li>
+		      		<%= select_tag "state", options_from_collection_for_select(@states, "id", "name"), prompt: "[All State]" %>
+		      </li>
+		      <!--<li><a href="#">Suburb</a></li>
+		      <li>
+		      		<select class="form-control">
+		      			<option>New South Wales</option>
+		      			<option>Victoria</option>
+		      		</select>
+		      </li>
+		      <li><a href="#">Postcode</a></li> -->
+		    </ul>
+	    </form> 
+	    <ul class="nav navbar-nav navbar-right">
+	      <li class="active"><a href="./admin">Login <span class="sr-only">(current)</span></a></li>
+	    </ul>
+	  </div><!--/.nav-collapse -->
+	</div>
+</div>
+
+
+<%= react_component('HomeApp') %>
+<div id="map2"></div>
+<!-- <div id="map" class="container"></div> -->
+<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script type="text/jsx">
+	React.render(<MapWidget/>, document.getElementById('map2'));
+</script>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX3crqk3Cs0mS6RubvUNA9LgkB2PiTchk&libraries=places&callback=initMap"
+        async defer></script>-->
+
