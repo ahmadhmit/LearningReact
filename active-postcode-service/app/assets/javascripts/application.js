@@ -45,6 +45,13 @@ reloadAvailableTags = function() {
     availableTags.push(dataSuburbs[i].name);
   };
   
+
+
+
+
+
+
+  
   $("#pac-input").autocomplete({
     source: availableTags,
     select: function( event, ui ) {
